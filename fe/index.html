@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/books.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Library Management System</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Add New Book</h2>
+            <form id="book-form">
+                <input type="text" id="title" placeholder="Title" required>
+                <input type="text" id="author" placeholder="Author" required>
+                <input type="text" id="genre" placeholder="Genre">
+                <input type="number" id="year" placeholder="Published Year">
+                <button type="submit">Add Book</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Book List</h2>
+            <div class="filter-container">
+                <label>Filter by Author:</label>
+                <select id="author-filter">
+                    <option value="">All Authors</option>
+                </select>
+
+                <label>Loan Status:</label>
+                <select id="loan-filter">
+                    <option value="">All Statuses</option>
+                    <option value="loaned">Loaned Out</option>
+                    <option value="available">Available</option>
+                </select>
+            </div>
+            <table id="book-list">
+                <thead>
+                    <tr><th>Title</th><th>Author</th><th>Genre</th><th>Year</th><th>Status</th></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
